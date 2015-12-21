@@ -1,0 +1,8 @@
+<template name="sidebar">
+    <h3>Product Categories</h3>
+    <div class="list-group">
+    {{#each categories}}
+        <a href="/categories/{{slug}}" class="list-group-item">{{name}}</a>
+    {{/each}}
+    </div>
+</template>

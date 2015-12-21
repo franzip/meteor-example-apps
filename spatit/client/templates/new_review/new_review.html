@@ -1,0 +1,26 @@
+<template name="new_review">
+    <h3>Add a review for <strong>{{name}}</strong></h3>
+    <form class="new-review">
+        <div class="form-group">
+            <label for="rating">Rating</label>
+            <select name="rating" id="rating" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="myTextArea">Review</label>
+            <textarea class="form-control" name="body" id="myTextArea"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" name="submit" class="btn btn-success" value="Submit Review">
+            <a href="/" class="btn btn-default">Close</a>
+        </div>
+
+    </form>
+</template>

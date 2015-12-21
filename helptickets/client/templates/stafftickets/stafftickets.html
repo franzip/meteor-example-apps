@@ -1,0 +1,34 @@
+<template name="stafftickets">
+    <div class="panel panel-primary ticket-table">
+        <div class="panel-heading">
+            <h3 class="panel-title">Manage Tickets</h3>
+        </div>
+    <div class="panel-body">
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th width="120">#</th>
+                <th>Subject</th>
+                <th>Date Opened</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ #each tickets }}
+            <tr>
+                <td>{{ _id }}</td>
+                <td><a href="/ticket/{{_id}}">{{ subject }}</a></td>
+                <td>{{formatDate createdAt}}</td>
+                <td>{{capFirst status}}</td>
+                <td><a href="#" class="btn btn-danger btn-tiny close-ticket">Close</a></td>
+            </tr>
+            {{ else }}
+            <tr>
+                <td rowspan="3">There are no open tickets</td>
+            </tr>
+            {{ /each }}
+        </tbody>
+    </table>
+</div>
+</template>

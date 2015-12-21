@@ -1,0 +1,48 @@
+<template name="departments">
+    <div class="panel panel-primary dept-table">
+        <div class="panel-heading">
+            <h3 class="panel-title">Manage Departments</h3>
+        </div>
+        <div class="panel-body"></div>
+        <div class="table table-hover">
+            <thead>
+                <tr>
+                    <th width="120">#</th>
+                    <th>Name</th>
+                    <th>Dept Head</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each departments}}
+                <tr>
+                    <td>{{_id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{head}}</td>
+                    <td><a href="#" class="btn btn-danger btn-tiny delete-department">Delete</a></td>
+                </tr>
+                {{else}}
+                <tr>
+                    <td rowspan="3">There are no departments created</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </div>
+    </div>
+</template>
+
+<template name="add_department">
+    <h3></h3>
+    <form class="add-department-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="head">Department Head</label>
+            <input type="text" class="form-control" id="head" name="head" placeholder="Department Head">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</template>

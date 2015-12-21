@@ -1,0 +1,10 @@
+<body id="form_layout">
+    {{ renderPage }}
+</body>
+
+<template name="form_layout">
+    <div class="container">
+        {{> flashMessages }}
+        {{> yield }}
+    </div>
+</template>

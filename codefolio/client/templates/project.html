@@ -1,0 +1,17 @@
+<template name="project">
+    <div class="container pt">
+            <div class="row mt">
+                <div class="col-lg-6 col-lg-offset-3 centered">
+                    <h3>{{name}}</h3>
+                    <hr>
+                    <p>{{description}}</p>
+                </div>
+            </div>
+            <div class="row mt centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p><img class="img-responsive" src="{{projectImage}}" alt=""></p>
+                    <p><bt>Client: <a href="#">{{client}}</a></bt> - <bt>Type: <a href="#">{{type}}</a></bt> - <bt>Date: <a href="#">{{formatDate projectDate}}</a></bt></p>
+                </div>
+            </div><!-- /row -->
+    </div><!-- /container -->
+</template>

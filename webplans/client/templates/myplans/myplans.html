@@ -1,0 +1,25 @@
+<template name="myplans">
+    <h1>My Plans</h1>
+    <table class="u-full-width">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each plans}}
+            <tr>
+                <td>{{plan_name}}</td>
+                <td>{{plan_days}} Days</td>
+                <td>{{plan_price}}</td>
+                <td>
+                    <a href="" class="cancel-plan button button-danger">Cancel</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

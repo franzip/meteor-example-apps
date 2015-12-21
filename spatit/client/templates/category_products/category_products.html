@@ -1,0 +1,21 @@
+<template name="category_products">
+    {{#each category_products}}
+        <h3>Products</h3>
+        <div class="row product-row">
+            <div class="col-md-2">
+                <img src="{{image}}" alt="foo" class="full">
+            </div>
+            <div class="col-md-10">
+                <h4>{{name}}</h4>
+                <p>Average Rating: RATING</p>
+                <p>{{ description }}</p>
+                <a href="{{pathFor 'product'}}" class="btn btn-default">Read Reviews</a>
+                {{ #if currentUser }}
+                <a href="{{pathFor 'new_review'}}" class="btn btn-primary">Add a Review</a>
+                {{ /if }}
+            </div>
+        </div>
+    {{else}}
+        <p>There are no products in this category.</p>
+    {{/each}}
+</template>

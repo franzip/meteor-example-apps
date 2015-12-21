@@ -1,0 +1,30 @@
+<template name="ticket">
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Ticket ID:</strong> {{_id}}</li>
+        <li class="list-group-item"><strong>Customer Name:</strong> {{name}}</li>
+        <li class="list-group-item"><strong>Department:</strong> {{department}}</li>
+        <li class="list-group-item"><strong>Priority:</strong> {{capFirst priority}}</li>
+        <li class="list-group-item"><strong>Ticket Date:</strong> {{formatDate createdAt}}</li>
+        <li class="list-group-item"><strong>Subject:</strong> {{subject}}</li>
+        <li class="list-group-item"><strong>Status:</strong> {{capFirst status}}</li>
+        <li class="list-group-item"><strong>Message (Customer):</strong> {{message}}</li>
+    </ul>
+
+    <form class="add-reply">
+        <div class="form-group">
+            <label for="reply">Reply</label>
+            <textarea class="form-control" name="reply" id="reply"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Reply</button>
+    </form>
+    <hr>
+    {{#each replies}}
+        <div class="reply-{{usertype}}">
+            <strong>
+                {{capFirst usertype}}
+            </strong>
+            [{{replyDate}}]:
+            <strong>{{reply}}</strong>
+        </div>
+    {{/each}}
+</template>

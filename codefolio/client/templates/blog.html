@@ -1,0 +1,20 @@
+<template name="blog">
+    {{#each posts}}
+    <div id="grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p><img src="{{getAdminImage}}" width="50px" height="50px" alt=""><ba>{{getAdminName}}</ba></p>
+                    <p><bd>{{updatedAt}}</bd></p>
+                    <h4>{{title}}</h4>
+                    <p>{{body}}</p>
+                    <p><a href="/blog/post/{{_id}}">Continue Reading...</a></p>
+                </div>
+
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /grey -->
+    {{else}}
+        <p>There are no posts to display.</p>
+    {{/each}}
+</template>

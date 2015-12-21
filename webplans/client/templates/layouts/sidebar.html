@@ -1,0 +1,18 @@
+<template name="sidebar">
+    {{> loginButtons}}
+    <br/><br/>
+    {{#if isInRole 'admin'}}
+        <a class="button button{{#if currentRoute 'listsubscribers'}}-primary{{/if}}" href="/admin/subscribers">View Subscribers</a>
+        <a class="button button{{#if currentRoute 'listplans'}}-primary{{/if}}" href="/admin/plans">View Plans</a>
+        <a class="button button{{#if currentRoute 'addplan'}}-primary{{/if}}" href="/admin/plans/add">Add New Plan</a>
+    {{/if}}
+
+    <a href="/" class="button button{{#if currentRoute 'plans'}}-primary{{/if}}">View Plans</a>
+
+    {{#if currentUser}}
+        {{#if isInRole 'admin'}}
+        {{else}}
+        <a href="/myplans" class="button button{{#if currentRoute 'myplans'}}-primary{{/if}}">My Plans</a>
+        {{/if}}
+    {{/if}}
+</template>

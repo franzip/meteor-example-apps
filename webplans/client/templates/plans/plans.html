@@ -1,0 +1,13 @@
+<template name="plans">
+    <h1>View Plans</h1>
+    <div class="row">
+        {{#each plans}}
+            <div class="four columns plan">
+                <h3>{{plan_label}}</h3>
+                <p>{{description}}</p>
+                <div class="price">${{price}} For {{days}} Days</div>
+                <a class="button button-primary buy-plan" id="{{_id}}" rel="{{plan_name}}">Buy Now</a>
+            </div>
+        {{/each}}
+    </div>
+</template>

@@ -1,0 +1,23 @@
+<body>
+    {{renderPage}}
+</body>
+
+<template name="layout">
+    {{#if isStaff}}
+        {{> navbar_staff}}
+    {{ else }}
+        {{> navbar }}
+    {{/if}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                {{> login }}
+            </div>
+            <div class="col-md-9">
+                {{> flashMessages }}
+                {{> yield }}
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+</template>

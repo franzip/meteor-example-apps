@@ -1,0 +1,16 @@
+<template name="work">
+    <!-- +++++ Projects Section +++++ -->
+
+    <div class="container pt">
+        <div class="row mt-centered">
+            {{#each projects}}
+                <div class="col-lg-4">
+                    <a class="zoom green" href="/project/{{_id}}"><img class="img-responsive" src="{{projectImage}}" alt="" /></a>
+                    <p>{{name}}</p>
+                </div>
+            {{else}}
+                <p>There are no projects to display.</p>
+            {{/each}}
+        </div>
+    </div><!-- /container -->
+</template>

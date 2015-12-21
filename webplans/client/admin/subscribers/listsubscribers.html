@@ -1,0 +1,27 @@
+<template name="listsubscribers">
+    <h1>Subscribers</h1>
+    <table class="u-full-width">
+        <thead>
+            <tr>
+                <th>User Email</th>
+                <th>Plan</th>
+                <th>Join Date</th>
+                <th>End Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each subscribers}}
+            <tr>
+                <td>{{user_email}}</td>
+                <td>{{plan_label}}</td>
+                <td>{{formatDate join_date}}</td>
+                <td>{{getEndDate join_date plan_days}}</td>
+                <td>
+                    <a href="" class="cancel-subscription button button-danger">Cancel</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

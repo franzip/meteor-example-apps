@@ -1,0 +1,60 @@
+<template name="login">
+    {{#if currentUser}}
+        <div class="panel panel-default panel-login">
+            <div class="panel-heading">
+                <h3 class="panel-title">Welcome Back</h3>
+            </div>
+            <div class="panel-body">
+                {{userEmail}}
+                <hr>
+                <form class="logout-form">
+                    <button type="submit" class="btn btn-primary">Logout</button>
+                </form>
+            </div>
+        </div>
+    {{else}}
+    <div class="panel panel-default panel-login">
+        <div class="panel-heading">
+            <h3 class="panel-title">Customer Login</h3>
+        </div>
+        <div class="panel-body">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <a href="#" class="register-link">Create an Account</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default panel-register">
+        <div class="panel-heading">
+            <h3 class="panel-title">Customer Register</h3>
+        </div>
+        <div class="panel-body">
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="password2">Password</label>
+                    <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <a href="#" class="login-link">Log In</a>
+            </form>
+        </div>
+    </div>
+    {{/if}}
+</template>

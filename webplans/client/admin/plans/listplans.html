@@ -1,0 +1,26 @@
+<template name="listplans">
+    <h1>View Plans</h1>
+    <table class="u-full-width">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each plans}}
+            <tr>
+                <td>{{plan_name}}</td>
+                <td>{{days}} Days</td>
+                <td>{{price}}</td>
+                <td>
+                    <a href="/admin/plans/edit/{{_id}}" class="button button-primary">Edit</a>
+                    <a href="" class="delete-plan button button-danger">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

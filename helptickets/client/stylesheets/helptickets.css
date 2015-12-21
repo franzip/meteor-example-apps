@@ -1,0 +1,17 @@
+.panel-register {
+    display: none;
+}
+
+.center {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.reply-customer, .reply-staff {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.reply-customer {
+    background: #f4f4f4;
+}
