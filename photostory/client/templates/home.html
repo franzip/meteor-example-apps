@@ -1,0 +1,10 @@
+<template name="home">
+    {{#if currentUser}}
+        {{> dropzone}}
+    {{/if}}
+    {{#each images}}
+        {{> image}}
+        {{> imageInfo}}
+        <hr>
+    {{/each}}
+</template>

@@ -1,0 +1,16 @@
+<template name="imageInfo">
+    <div class="imageInfo">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{getTitle _id}}
+                    <span class="pull-right">
+                    Posted by: <a href="http://twitter.com/{{getUsername _id}}" target="_blank">{{getUsername _id}}</a>
+                    </span>
+                </h3>
+            </div>
+            <div class="panel-body">
+            {{getStory _id}}
+            </div>
+        </div>
+    </div>
+</template>
